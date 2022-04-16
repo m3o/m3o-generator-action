@@ -1,6 +1,6 @@
 # M3O Generator Action
 
-This action generates M3O clients of the specified target, target like dart, cli, curl etc.
+This action generates M3O clients of the specified target. Available targets are: go, dart, ts, shell (curl examples) and cli (m3o-cli examples).
 
 ## Inputs
 
@@ -10,7 +10,7 @@ This action generates M3O clients of the specified target, target like dart, cli
 
 ## `services_path`
 
-**Required** The path of micro/services.
+**Required** The path of micro/services repo in the current workflow.
 
 <!-- ## Outputs
 

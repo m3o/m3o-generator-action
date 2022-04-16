@@ -3,7 +3,7 @@ name: 'M3O Generator Action'
 description: 'This action will generate M3O Clients of the specified target'
 inputs:
   target:
-    description: 'The language or the tool e.g. dart, cli or curl ...'
+    description: 'The language or the tool e.g. dart, ts, cli ...'
     required: true
     default: go
   services_path:
@@ -17,3 +17,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.target }}
+    - ${{ inputs.services_path }}
