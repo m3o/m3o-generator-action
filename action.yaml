@@ -1,0 +1,19 @@
+# action.yaml
+name: 'M3O Generator Action'
+description: 'This action will generate M3O Clients of the specified target'
+inputs:
+  target:
+    description: 'The language or the tool e.g. dart, cli or curl ...'
+    required: true
+    default: go
+  services_path:
+    description: 'The path to services'
+    required: true
+# outputs:
+#   success:
+#     description: 'The result of this Action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.target }}
