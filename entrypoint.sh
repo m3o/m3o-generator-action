@@ -12,8 +12,14 @@ m3o-client-gen ${INPUT_TARGET}
 
 if [ ${INPUT_TARGET} = 'go' ]
 then
-    echo 'Formatting m3o-go clients and examples'
+    echo 'Formatting m3o-go clients and examples...'
     go fmt ./...
+fi
+
+if [ ${INPUT_TARGET} = 'ts' ]
+then
+    echo 'Formatting m3o-js clients and examples...'
+    prettier -w clients/ts/ examples/js/ 
 fi
 
 # echo "::set-output name=success::$success"

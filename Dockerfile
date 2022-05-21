@@ -5,6 +5,15 @@ WORKDIR /factory
 # set up tools
 RUN apt-get update && apt-get upgrade -y && apt-get install unzip
 
+# install nodejs
+RUN apt-get install nodejs -y
+
+# install npm
+RUN apt-get install npm -y
+
+# insatll prettier
+RUN npm install -g prettier
+
 # set up micro/micro
 RUN git clone https://github.com/micro/micro.git
 
